@@ -25,6 +25,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Push updates
+        continue-on-error: true
         run: |
           cd jdkAnnotations
           git config --local user.email "action@github.com"
